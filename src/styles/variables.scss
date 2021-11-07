@@ -1,0 +1,25 @@
+@use 'sass:math';
+
+$global-font-size-base: 16;
+
+$color-dark-blue: #06111f;
+$color-black: #000000;
+$color-black-transparent: rgba(0, 0, 0, 0.5);
+$color-white: #ffffff;
+$color-border-transparent: rgba(255, 255, 255, 0.2);
+
+// Typography
+$text-font-family: 'Quattro News', Arial;
+
+$text-font-size-tertiary: #{math.div(23, $global-font-size-base)}rem;
+$text-line-height-tertiary: #{math.div(32, 23)};
+
+$text-font-size-primary: #{math.div(16, $global-font-size-base)}rem;
+$text-line-height-primary: #{math.div(24, 16)};
+
+$text-font-size-small: #{math.div(13, $global-font-size-base)}rem;
+$text-line-height-small: #{math.div(20, 13)};
+
+$container-width: 1280;
+$spacing-small: #{math.div(16, $global-font-size-base)}rem;
+$spacing-large: #{math.div(80, $global-font-size-base)}rem;

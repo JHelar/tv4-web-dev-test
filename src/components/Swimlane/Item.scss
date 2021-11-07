@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+@import '../../styles/functions.scss';
+@import '../../styles/queries.scss';
+
+.swimlane-item {
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    flex: 0 0 var(--item-width);
+    width: var(--item-width);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 0.5rem;
+
+    border-radius: 8px;
+
+    @include breakpoint-large {
+        row-gap: 1rem;
+    }
+
+    &:focus {
+        outline: 2px solid var(--color-text);
+        outline-offset: -2px;
+    }
+
+    &__image {
+        border-radius: 8px;
+        height: calc(var(--item-image-height) * 1px);
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        margin: 0;
+        text-align: center;
+        font-size: #{$text-font-size-small};
+        line-height: #{$text-line-height-small};
+    }
+}

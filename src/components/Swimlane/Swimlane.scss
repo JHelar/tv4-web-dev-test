@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+@import '../../styles/functions.scss';
+@import '../../styles/queries.scss';
+
+.swimlane {
+    --item-image-height: 207px;
+    --item-width: 138px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+
+    @include breakpoint-large {
+        --item-image-height: 300px;
+        --item-width: 200px;
+        row-gap: 1rem;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0 1rem;
+
+        font-size: #{$text-font-size-tertiary};
+        line-height: #{$text-line-height-tertiary};
+
+        @include breakpoint-large {
+            padding: 0 5rem;
+        }
+    }
+}

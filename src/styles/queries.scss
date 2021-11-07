@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+@mixin breakpoint-large {
+    @media (min-width: #{$container-width}px) {
+        @content;
+    }
+}
+
+@mixin reduced-motion {
+    @content;
+
+    @media (prefers-reduced-motion) {
+        & {
+            transition: none;
+        }
+    }
+}

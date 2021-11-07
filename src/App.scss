@@ -1,0 +1,15 @@
+@import './styles/functions.scss';
+@import './styles/queries.scss';
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    padding-bottom: 2.5rem;
+
+    @include breakpoint-large {
+        row-gap: 3rem;
+        padding-bottom: 10rem;
+    }
+}
