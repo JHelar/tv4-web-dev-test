@@ -11,15 +11,37 @@ $color-border-transparent: rgba(255, 255, 255, 0.2);
 // Typography
 $text-font-family: 'Quattro News', Arial;
 
-$text-font-size-tertiary: #{math.div(23, $global-font-size-base)}rem;
-$text-line-height-tertiary: #{math.div(32, 23)};
+$text-tertiary: (
+    size: (
+        large: #{math.div(23, $global-font-size-base)}rem,
+        small: #{math.div(18, $global-font-size-base)}rem,
+    ),
+    height: (
+        large: #{math.div(32, 23)},
+        small: #{math.div(24, 18)},
+    ),
+);
 
-$text-font-size-primary: #{math.div(16, $global-font-size-base)}rem;
-$text-line-height-primary: #{math.div(24, 16)};
+$text-primary: (
+    size: (
+        large: #{math.div(16, $global-font-size-base)}rem,
+        small: #{math.div(16, $global-font-size-base)}rem,
+    ),
+    height: (
+        large: #{math.div(24, 16)},
+        small: #{math.div(24, 16)},
+    ),
+);
 
-$text-font-size-small: #{math.div(13, $global-font-size-base)}rem;
-$text-line-height-small: #{math.div(20, 13)};
+$text-small: (
+    size: (
+        large: #{math.div(13, $global-font-size-base)}rem,
+        small: #{math.div(13, $global-font-size-base)}rem,
+    ),
+    height: (
+        large: #{math.div(20, 13)},
+        small: #{math.div(20, 13)},
+    ),
+);
 
 $container-width: 1280;
-$spacing-small: #{math.div(16, $global-font-size-base)}rem;
-$spacing-large: #{math.div(80, $global-font-size-base)}rem;

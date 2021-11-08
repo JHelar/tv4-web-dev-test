@@ -1,5 +1,4 @@
 @import '../../styles/variables.scss';
-@import '../../styles/functions.scss';
 @import '../../styles/queries.scss';
 
 .swimlane__slider {
@@ -15,8 +14,9 @@
         flex-flow: row nowrap;
         column-gap: 0.5rem;
 
+        scroll-behavior: smooth;
         @include reduced-motion {
-            scroll-behavior: smooth;
+            scroll-behavior: auto;
         }
 
         @include breakpoint-large {

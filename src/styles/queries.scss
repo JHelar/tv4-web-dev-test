@@ -7,11 +7,7 @@
 }
 
 @mixin reduced-motion {
-    @content;
-
     @media (prefers-reduced-motion) {
-        & {
-            transition: none;
-        }
+        @content;
     }
 }

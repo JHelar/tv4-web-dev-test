@@ -1,5 +1,4 @@
-@import '../../styles/variables.scss';
-@import '../../styles/functions.scss';
+@import '../../styles/typography.scss';
 @import '../../styles/queries.scss';
 
 .swimlane {
@@ -20,8 +19,7 @@
         margin: 0;
         padding: 0 1rem;
 
-        font-size: #{$text-font-size-tertiary};
-        line-height: #{$text-line-height-tertiary};
+        @include text-tertiary;
 
         @include breakpoint-large {
             padding: 0 5rem;

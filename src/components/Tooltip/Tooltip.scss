@@ -1,5 +1,5 @@
 @import '../../styles/variables.scss';
-@import '../../styles/queries.scss';
+@import '../../styles/typography.scss';
 
 .tooltip {
     box-sizing: border-box;
@@ -9,8 +9,7 @@
     width: 300px;
 
     color: var(--color-text);
-    font-size: #{$text-font-size-primary};
-    line-height: #{$text-line-height-primary};
+    @include text-primary;
 
     background-color: var(--color-black-transparent);
     padding: 1rem;
@@ -25,8 +24,9 @@
     opacity: 0;
     visibility: hidden;
 
+    transition: opacity 0.2s ease, visibility 0s linear 0.2s;
     @include reduced-motion {
-        transition: opacity 0.2s ease, visibility 0s linear 0.2s;
+        transition: none;
     }
 
     transform: translateY(calc(-100% - 1rem + 1px));
@@ -37,8 +37,9 @@
         opacity: 1;
         visibility: visible;
 
+        transition: opacity 0.2s ease, visibility 0s linear;
         @include reduced-motion {
-            transition: opacity 0.2s ease, visibility 0s linear;
+            transition: none;
         }
     }
 }

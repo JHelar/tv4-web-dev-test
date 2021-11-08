@@ -1,5 +1,4 @@
-@import '../../styles/variables.scss';
-@import '../../styles/functions.scss';
+@import '../../styles/typography.scss';
 @import '../../styles/queries.scss';
 
 .swimlane-item {
@@ -37,7 +36,7 @@
     &__title {
         margin: 0;
         text-align: center;
-        font-size: #{$text-font-size-small};
-        line-height: #{$text-line-height-small};
+
+        @include text-small;
     }
 }

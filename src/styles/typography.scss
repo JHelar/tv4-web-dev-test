@@ -1,0 +1,26 @@
+@use 'sass:map';
+
+@import './variables.scss';
+@import './queries.scss';
+
+@mixin text-font($font-map) {
+    font-size: map.get($font-map, size, small);
+    line-height: map.get($font-map, height, small);
+
+    @include breakpoint-large {
+        font-size: map.get($font-map, size, large);
+        line-height: map.get($font-map, height, large);
+    }
+}
+
+@mixin text-small {
+    @include text-font($text-small);
+}
+
+@mixin text-primary {
+    @include text-font($text-small);
+}
+
+@mixin text-tertiary {
+    @include text-font($text-tertiary);
+}
